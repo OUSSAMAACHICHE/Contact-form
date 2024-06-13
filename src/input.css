@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label {
+	font-size: 16px;
+	@apply text-custom-gray-900 w-fit py-2 block relative;
+}
+label:not(:last-child):after {
+	content: '*';
+	@apply absolute -right-3 text-green-600m 
+}
+.custom_inputs_styles {
+	@apply border-custom-gray-500 border w-full rounded-md py-3 px-4 mb-3 relative
+}
+
+.query input {
+	opacity: 0;
+}
+.query.checked{
+	@apply border-green-600m bg-green-200l
+}
+.circle.checked {
+	@apply border-green-600m
+}
+/* make all inputs custom outline */
+input,textarea {
+	@apply focus-within:outline-green-600m;
+}
+
+
+
+
+
+
+@font-face {
+	font-family: karlaFont;
+	src: url('../assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('ttf');
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

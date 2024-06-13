@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Contact form</title>
+    <!-- Css files  -->
+    <link rel="stylesheet" href="./src/output.css">
+
+
+  </head>
+
+  <body class="bg-green-200l flex flex-col justify-center items-center min-h-screen relative">
+    <!--success message-->
+    <div id="success-msg"
+      class="bg-custom-gray-900 p-4 rounded-md w-[90%] md:w-[60%]  mt-2 text-custom-white opacity-0 transition-all duration-300 ease-in">
+      <h2 class="flex gap-2"><img src="./assets/images/icon-success-check.svg" alt=""> Message Sent!</h2>
+      <p class="text-custom-gray-500"> Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <!--//success message//-->
+
+
+    <main class="bg-custom-white max-w-[90%] md:w-[60%] p-6 rounded-xl mb-4">
+      <h1 class="text-3xl font-karla font-bold text-custom-gray-900 mb-4">Contact Us</h1>
+      <form action="#" >
+        <div class="md:grid grid-cols-2 gap-3">
+          <div>
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" class="custom_inputs_styles">
+            <div id="first-name_error" class="text-red -mt-2 mb-2"></div>
+          </div>
+          <div>
+            <label for="Last-name">Last Name</label>
+            <input type="text" name="Last-name" id="last-name" class="custom_inputs_styles">
+            <div id="last-name_error" class="text-red -mt-2 mb-2"></div>
+          </div>
+        </div>
+
+        <label for="email">Email Address</label>
+        <input type="text" name="Email Address" id="email" class="custom_inputs_styles">
+        <div id="emailErrorMsg" class="text-red -mt-2 mb-2"></div>
+        <!-- Query Type  -->
+        <label>Query Type</label>
+        <div class="md:grid grid-cols-2 gap-3">
+        <div class="custom_inputs_styles query cursor-pointer flex items-center">
+          <span
+            class="circle bg-custom-white w-4 h-4 border border-custom-gray-900 rounded-full flex items-center justify-center relative "><span
+              class="absolute bg-green-600m w-[70%] h-[70%] rounded-full hidden"></span></span>
+          <input type="checkbox" name="General Enquiry" id="general">
+          <span class="text-custom-gray-900 text-sm font-[400]">General Enquiry</span>
+        </div>
+        <div class="custom_inputs_styles query cursor-pointer flex items-center">
+          <span
+            class="circle bg-custom-white w-4 h-4 border border-custom-gray-900 rounded-full flex items-center justify-center relative "><span
+              class="absolute bg-green-600m w-[70%] h-[70%] rounded-full hidden"></span></span>
+          <input type="checkbox" name="Support Request" id="Request">
+          <span class="text-custom-gray-900 text-sm font-[400]">Support Request</span>
+        </div>
+      </div>
+        <div id="query-error" class="text-red -mt-2 mb-2"></div>
+        <!--Message-->
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="10" class="custom_inputs_styles md:h-[120px]"></textarea>
+        <div id="textarea-msg" class="text-red -mt-2 mb-2"></div>
+
+        <div class="flex gap-4">
+          <input type="checkbox" name="contacted team" id="team" class="w-6">
+          <label for="team" class="text-sm">I consent to being contacted by the team <span
+              class="text-green-600m ">*</span></label>
+        </div>
+        <div id="contact-team-error" class="text-red  mb-2"></div>
+        <button id="submit"
+          class="bg-green-600m text-custom-white w-full rounded-md p-3 font-[400] hover:bg-custom-gray-900 transition-all duration-150 my-5">Submit</button>
+      </form>
+    </main>
+
+    <div class="attribution fixed bottom-0">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Ouss_Ach</a>.
+    </div>
+    <script src="./src/main.js"></script>
+  </body>
+
+</html>
